@@ -1,8 +1,20 @@
-sudo: required
-services: 
- - docker
-before_install:
- - docker builld . -t myimage -f Dockerfile.dev
-scripts:
- - docker run -e=CI myimage npm run test
- 
+
+#sudo: required
+#services: 
+# - docker
+#before_install:
+# - docker build . -t shivalika/react-test -f Dockerfile.dev
+#scripts:
+# - docker run -e=CI shivalika/react-test npm run test
+#deploy:
+#  provider: elasticbeanstalk
+#  region: "eu-west-1"
+#  app: "Docker-repo"
+#  env: "Docker-repo-env"
+#  bucket_name: "elasticbeanstalk-eu-west-1-800443831915"
+#  bucket_path: "Docker-repo"
+#  on:
+#   branch: master
+#  acess_key_id: $AWS_ACCESS_KEY
+#  secret_access_key: $AWS_SECRET_KEY
+  
